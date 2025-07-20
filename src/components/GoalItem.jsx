@@ -13,3 +13,4 @@ function GoalItem({goal}){
         </div>
     )
 }
+export default GoalItem;
