@@ -11,6 +11,8 @@ function GoalItem({ goal, onDelete }) {
       <p>Saved: ${savedAmount}</p>
       <p>Remaining: ${remaining}</p>
       <p>Progress: {progress.toFixed(1)}%</p>
+      <p>Created At: {goal.createdAt}</p>
+      <p>Deadline: {goal.deadline}</p>
       <button onClick={() => onDelete(id)}>Delete</button>
     </div>
   );
