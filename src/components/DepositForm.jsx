@@ -6,10 +6,16 @@ function DepositForm({ goals, onDeposit }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const selectedGoal = goals.find((g) => g.id === Number(goalId));
-    if (!selectedGoal) return;
 
-    const newSaved = Number(selectedGoal.savedAmount) + Number(amount);
+    const selectedGoal = goals.find((g) => g.id === Number(goalId));
+    if (!selectedGoal) {
+      alert("Goal not found");
+      return;
+    }
+
+    const newSaved = Number(selectedGoal.savedAmount || 0) + Number(amount);
+
+  
     onDeposit(Number(goalId), { savedAmount: newSaved });
 
     setGoalId("");
@@ -37,5 +43,4 @@ function DepositForm({ goals, onDeposit }) {
     </form>
   );
 }
-
 export default DepositForm;
