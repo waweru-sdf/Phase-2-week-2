@@ -3,6 +3,7 @@ import GoalList from "./components/GoalList";
 import GoalForm from "./components/GoalForm";
 import DepositForm from "./components/DepositForm";
 import Overview from "./components/Overview";
+import "./App.css"
 
 function App() {
   const [goals, setGoals] = useState([]);

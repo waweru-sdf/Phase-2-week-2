@@ -1,0 +1,26 @@
+.goal-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap:0px;
+  justify-content: flex-start;
+}
+
+
+.goal-item {
+  background: #06D6A0;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 10PX;
+}
+
+.goal-item button {
+  background: #F8FFE5;
+  color: #2BC0E4;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
