@@ -7,14 +7,16 @@ import Overview from "./components/Overview";
 function App() {
   const [goals, setGoals] = useState([]);
 
+  // Fetch goals from deployed server
   useEffect(() => {
-    fetch("http://localhost:3000/goals")
+    fetch("https://phase-2-server.onrender.com/goals")
       .then((res) => res.json())
       .then(setGoals);
   }, []);
 
+  // Add a new goal
   function addGoal(newGoal) {
-    fetch("http://localhost:3000/goals", {
+    fetch("https://phase-2-server.onrender.com/goals", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newGoal),
@@ -23,8 +25,9 @@ function App() {
       .then((goal) => setGoals([...goals, goal]));
   }
 
+  // Update a specific goal
   function updateGoal(id, updatedFields) {
-    fetch(`http://localhost:3000/goals/${id}`, {
+    fetch(`https://phase-2-server.onrender.com/goals/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedFields),
@@ -36,23 +39,21 @@ function App() {
       });
   }
 
+  // Delete a goal
   function deleteGoal(id) {
-    fetch(`http://localhost:3000/goals/${id}`, { method: "DELETE" }).then(() =>
-      setGoals(goals.filter((g) => g.id !== id))
-    );
+    fetch(`https://phase-2-server.onrender.com/goals/${id}`, {
+      method: "DELETE",
+    }).then(() => setGoals(goals.filter((g) => g.id !== id)));
   }
 
+  // Render the UI
   return (
     <div className="App">
       <h1>Smart Goal Planner</h1>
       <GoalForm onAddGoal={addGoal} />
       <DepositForm goals={goals} onDeposit={updateGoal} />
       <Overview goals={goals} />
-      <GoalList
-        goals={goals}
-        onUpdate={updateGoal}
-        onDelete={deleteGoal}
-      />
+      <GoalList goals={goals} onUpdate={updateGoal} onDelete={deleteGoal} />
     </div>
   );
 }
