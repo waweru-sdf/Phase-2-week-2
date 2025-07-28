@@ -6,12 +6,34 @@ FELIX WAWERU
 ## Description
 Smart Goal Planner is a React-based application that allows users to set, track, deposit towards, and manage personal goals with deadlines and savings targets. It provides full CRUD functionality using a local JSON server.
 
-## Accessibility
-+ Open the link to the repo
-+ Fork to have it under your name
-+ Copy the SSH/HTTP link on the github repo
-+ git clone the link
-+ cd to the link
+##  Setup Instructions
+
+Follow these steps to set up and run the project locally:
+
+### 1. Clone the Repository
+
+Using SSH:
+
+    git clone git@github.com:waweru-sdf/Phase-2-week-2.git
+
+Or using HTTPS:
+
+    git clone https://github.com/waweru-sdf/Phase-2-week-2.git
+
+Then navigate into the project folder:
+
+    cd Phase-2-week-2
+
+### 2. Open the Project in VS Code
+
+    code .
+
+### 3. Install Dependencies
+
+Make sure you have Node.js and npm installed. Then run:
+
+    npm install
+
 
 ## Links
 - [Frontend](https://687e8a7b26f1efc23db8b39e--goal-plan.netlify.app/)
