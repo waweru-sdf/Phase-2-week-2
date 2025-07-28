@@ -4,7 +4,7 @@
 FELIX WAWERU
 
 ## Description
-Smart Goal Planner is a React-based application that allows users to set, track, deposit towards, and manage personal goals with deadlines and savings targets. It provides full CRUD functionality using a local JSON server.
+Smart Goal Planner is a React-based application that allows users to set, track, deposit towards, and manage personal goals with deadlines and savings targets. It provides CRUD functionality using Render.
 
 ##  Setup Instructions
 
@@ -49,7 +49,6 @@ Make sure you have Node.js and npm installed. Then run:
 
 ## Technology
 - React (Vite + JSX)
-- JSON Server (for local backend)
 - CSS 
 
 ## License
